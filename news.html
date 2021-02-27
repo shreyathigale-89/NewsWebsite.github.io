@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News App</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Font Awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!--Javascript file link-->
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section class="navbar" id="navbar">
+        <div class="logo">
+            <h1><span><i class="fab fa-dyalog"></i>AILY</span><i class="fas fa-newspaper"></i>NEWS</h1>
+        </div>
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="menu" id="menu">
+                <li class="data"><a href="javascript:getnews('news')">HOME</a></li>
+                <li class="data"><a href="javascript:getnews('sport')">SPORT</a></li>
+                <li class="data"><a href="javascript:getnews('tech')">TECHNOLOGY</a></li>
+                <li class="data"><a href="javascript:getnews('politics')">POLITICS</a></li>
+                <li class="data"><a href="javascript:getnews('business')">BUSINESS</a></li>
+                <li class="data"><a href="javascript:getnews('travel')">TRAVEL</a></li>
+                <li class="data"><a href="javascript:getnews('entertainment')">ENTERTAINMENT</a></li>
+                <li class="data"><a href="javascript:getnews('economics')">ECONOMICS</a></li>
+            </ul>
+
+            <div class="search" id="search_box">
+                <input type="text" id="input-box" placeholder="  Find what's happening...">
+            </div>
+        </nav>
+    </section>
+
+    <!--News Section-->
+
+    <section class="home" id="home">
+        <h1 class="headlines">Top Headlines !!</h1>
+        <div class="NewsList" id="NewsList">
+            <!--News Content-->
+            <script>
+                getnews('news');
+            </script>
+
+        </div>
+    </section>
+
+    <!--Footer  -->
+
+    <footer id="contact">
+
+        <div class="logo">
+            <h1><span><i class="fab fa-dyalog"></i>AILY</span><i class="fas fa-newspaper"></i>NEWS</h1>
+
+            <div class="social">
+                <a href="mailto:shreyathigale000@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/shreya-thigale-30067b160"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shreyathigale-89/"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="copy">
+                Copyright 2020 Name template.All right reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!--Custom alertBox-->
+    <div id='customAlert'>
+        <h1 id="msg">Please enter at least 3 letters.</h1>
+        <button id="ok" onclick="confirm()">OK</button>
+    </div>
+
+    <script>
+        const data = document.querySelectorAll(".data");
+
+        for (let i = 0; i < data.length; i++) {
+            data[i].addEventListener("click", function () {
+                document.getElementById("menu").style.left = "-100%";
+            });
+        }
+
+        document.getElementById('check').addEventListener('click', myFunction);
+
+        function myFunction() {
+            var x = document.getElementById("menu");
+            if (x.style.left === "-100%") {
+                x.style.left = "0";
+            } else {
+                x.style.left = "-100%"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

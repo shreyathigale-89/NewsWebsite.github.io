@@ -1,0 +1,509 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    transition: all ease 0.4s;
+}
+
+.landing_page
+{
+    height: 100vh;
+    max-width: 100%;
+    min-height: 400px;
+    background-position: top center;
+    background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)),url("img8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all ease 0.4s;
+}
+
+.content
+{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    text-align: center;
+    min-height: 400px;
+}
+
+.title
+{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 8px #1111;
+    font-weight: 600;
+    display: flex;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+.slider
+{
+    color: red;
+    margin-left: 12px;
+    animation: slider 6s linear infinite;
+    box-sizing: border-box;
+}
+@keyframes slider
+{
+    0%{ margin-top: -400px;}
+    5%{ margin-top: -200px;}
+    30%{ margin-top: -200px;}
+    35%{ margin-top: 0px;}
+    65%{ margin-top: 0px;}
+    70%{ margin-top: 200px;}
+    100%{ margin-top: 200px;}
+}
+
+p{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+p span
+{
+    color: red;
+}
+
+.get_started
+{
+    padding: 15px 18px 15px 18px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 29px;
+    font-size: 18px;
+    background-color: rgb(17, 5, 5);
+    transition: all ease 0.3s;
+}
+
+.get_started:hover
+{
+  color: black;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 19px;
+  border: 2px solid white;
+  font-weight: 550;
+}
+
+.get_started a
+{
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+.get_started a:hover
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*-------------------------------- Navbar section ----------------------*/
+section .navbar
+{
+
+   width: 100%;
+   transition: all 0.4s ease;  
+   background:radial-gradient( #090a0f 0%,#090a0f 100%);
+}
+
+.logo 
+{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    background:radial-gradient(#1f2731 0%,#090a0f 100%);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo span
+{
+    color: red;
+}
+
+.navbar .menu li 
+{
+   display: inline-block;
+   justify-content: right;
+   
+}
+
+.navbar .menu li a
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.4s ease;
+    text-decoration: none;
+
+}
+
+.navbar .menu li a:hover
+{
+    color: red;
+}
+
+.search input
+{
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 300px;
+    border-radius: 3px;
+}
+
+/*-------------------------------- Home section ----------------------*/
+
+.headlines
+{
+    animation: type 5s steps(16);
+    overflow: hidden;
+    white-space: nowrap;    
+    text-align: center; 
+}
+
+@keyframes type {
+    0%{
+        width:0ch;
+    }
+    50%
+    {
+        width:16ch;
+    }
+}
+h5
+{   text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.NewsList
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.news_card
+{
+    height: 480px;
+    transition: 0.4s all ease;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.6);
+    text-align: center;
+    background: #fff;
+    flex: 1 1 250px;
+    float: left;
+    margin: 10px;
+}
+
+.news_card img
+{
+    width: 100%;
+    height: 220px;
+}
+
+.news_card button
+{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: #090a0f;
+}
+
+.news_card button a
+{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #090a0f;
+}
+
+/* Contact */
+footer
+{
+    background:radial-gradient(ellipse at bottom,#1f2731 0%,#090a0f 100%);
+    text-align: center;
+    height: 30vh;
+    width: 100%;
+    transition: all .5s ease;
+}
+#contact
+{
+    display: none;
+}
+
+footer h1
+{
+    font-size: 1.6rem;
+    color: white;
+    padding-top: 1.6rem;  
+    letter-spacing: 0.1rem;
+}
+
+footer .social
+{
+    padding-top: 1.6rem;   
+}
+
+footer .social a{
+    color: white;
+    font-size:2rem;
+    padding-left: 1rem;
+    transition: all .5s ease;   
+}
+
+footer .social a:hover{
+    color:red;
+}
+
+footer .copy
+{
+    padding-top: 1.3rem;
+    color: gray;
+    font-size: 1.1rem;
+}
+
+.error
+{
+   text-align: center;
+   font-size:35px;
+   color: #222;
+}
+.tip
+{
+    text-align: center;
+    font-size:15px;
+    color: #222;
+}
+
+
+#customAlert
+{
+    display: none;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 0 1rem #222;
+    text-align: center;
+    padding: 10px;
+    z-index: 999;
+}
+#msg
+{
+    color: #222;
+    font-size: 20px;
+    padding: 10px;
+}
+#ok  {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+}
+/*----------------Media Queries------------- */
+
+/*--for responsive nav bar--*/
+.checkbtn
+{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    margin-left: 30px;
+    float: left;
+}
+
+#check
+{
+    display: none;
+}
+
+@media (max-width :952px)
+{
+.navbar li a{
+    font-size:16px
+}
+}
+
+@media (max-width :858px)
+{
+    .logo h1
+        {
+            font-size: 30px;
+        }
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background:radial-gradient(ellipse at bottom,#1f2731 0%,#090a0f 100%);
+        top: 140px;
+        left: -100%;
+        text-align: center;
+        transition: all ease 0.5s;
+    }
+
+    .navbar .menu li
+    {
+        margin: 50px 0;
+        display: block;
+    }
+
+    .navbar .menu li a
+    {
+        font-size: 16px;
+    }
+
+/*----------------------------------------------*/
+   
+    .search input
+    {
+        width: 180px;
+    }
+
+    .news_card
+       {
+        height: 380px;
+       }
+
+    @media (max-width :600px)
+    {
+
+        .title , .slider , #p2
+        {
+            font-size: 30px;
+        }
+
+        .logo h1
+        {
+            font-size: 20px;
+        }
+
+        label #btn ,label #cancel
+        {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+
+        .slider1
+        {
+            display: none; 
+        }
+
+        .slider
+        {
+            animation: none;
+            font-size: 23px;
+        }
+
+        .title
+        {
+            line-height: 50px;
+           font-size: 23px;
+           color: white;
+        }
+        .get_started
+        {
+            padding: 10px 13px 10px 13px;
+        }
+       
+        .headlines
+        {
+            font-size: 20px;
+        }
+        .search input
+        {
+            width: 150px;
+            font-size: 12px;
+            height: 30px;
+        }
+
+        ul
+        {
+            top: 149px;
+        }
+        .news_card
+       {
+        height: 400px;
+       }
+
+       #customAlert
+       {
+          height: 130px;
+          width: 250px;
+          padding: 7px;
+       }
+        #msg
+       {  
+          font-size: 15px;
+          padding: 7px;
+       }
+       #ok  {
+           padding: 7px 9px;
+        }
+    }
+
+    
+    @media (max-width :400px)
+    {
+        .title
+        {
+            font-size: 20px;
+        }
+
+        .slider
+        {
+            font-size: 20px;
+        }
+
+        #customAlert
+       {
+          height: 100px;
+          width: 200px;
+          padding: 5px;
+       }
+        #msg
+       {  
+          font-size: 10px;
+          padding: 5px;
+       }
+       #ok  {
+           padding: 5px 7px;
+        }
+    }
+}
